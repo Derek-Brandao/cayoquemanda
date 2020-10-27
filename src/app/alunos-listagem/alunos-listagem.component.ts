@@ -1,4 +1,3 @@
-import { ApiService } from './../api/api.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Aluno } from '../interfaces/aluno';

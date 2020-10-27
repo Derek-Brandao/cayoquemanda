@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { ApiService } from './api/api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlunosListagemComponent } from './alunos-listagem/alunos-listagem.component';
 
@@ -47,7 +45,6 @@ import { AlertService } from './services/alerts/alert.service';
     ],
   providers: [ 
     AlertService,
-    ApiService, 
     AuthGuard, 
     AuthService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
