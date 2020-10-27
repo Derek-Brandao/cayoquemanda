@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12  col-xl-12">
+            <img class="logo" src="../../assets/logo/logo.svg">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12  col-xl-12">
+            <div class="col-md-4 offset-md-4 containerForm">
+                <form [formGroup]="fGroup">
+                    <div class="form-group">
+                        <label>Nome completo:</label>
+                        <input class="form-control ng-pristine ng-invalid ng-touched" type="text" name="nome" formControlName="nome">
+
+                        <div *ngIf="fGroup.controls.nome.errors" class="text-center">
+                            <p *ngIf="fGroup.controls.nome.errors.minlength" class="erros">Por favor, digite seu nome por
+                                completo!</p>
+                            <p *ngIf="fGroup.controls.nome.errors.maxlength" class="erros">O valor máximo de 50
+                                caracteres
+                                foi excedido!</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>RGM</label>
+                        <input type="number" class="form-control ng-pristine ng-invalid ng-touched" name="matricula"
+                            formControlName="matricula">
+
+                            <div *ngIf="fGroup.controls.matricula.errors" class="text-center erros">
+                                <p *ngIf="fGroup.controls.matricula.errors.min">O
+                                    valor mínimo é de 8 dígitos!
+                                </p>
+                                <p *ngIf="fGroup.controls.matricula.errors.max">O
+                                    valor máximo é de 8 dígitos!
+                                </p>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="email" class="form-control ng-pristine ng-invalid ng-touched" name="email" formControlName="email">
+
+                        <div *ngIf="fGroup.controls.email.errors" class="text-center">
+                            <p *ngIf="fGroup.controls.email.errors.pattern" class=" erros">
+                                Esse não é um e-mail valido.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password"  class="form-control ng-pristine ng-invalid ng-touched" name="senha" formControlName="senha">
+
+                        <div *ngIf="fGroup.controls.senha.errors" class="text-center erros">
+                            <p *ngIf="fGroup.controls.senha.errors.pattern">
+                                Sua senha deve conter de 6 à 8 caracteres, <br>com pelo menos um número ou uma
+                                letra.
+                            </p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-light" expand="block" (click)="sendCadastro(fGroup.value)">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

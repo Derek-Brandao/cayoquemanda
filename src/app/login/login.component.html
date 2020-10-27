@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12  col-xl-12">
+            <img class="logo" src="../../assets/logo/logo.svg">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12  col-xl-12">
+            <div class="col-md-4 offset-md-4 containerForm">
+                <p class="text-center mb-5">Área do professor</p>
+                <form [formGroup]="fGroup" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>RGM</label>
+                        <input type="number" class="form-control ng-pristine ng-invalid ng-touched" name="matricula" formControlName="matricula">
+
+                    </div>
+                    <div *ngIf="fGroup.controls.matricula.errors" class="text-center erros">
+                        <p *ngIf="fGroup.controls.matricula.errors.min">O
+                            valor mínimo é de 8 dígitos!
+                        </p>
+                        <p *ngIf="fGroup.controls.matricula.errors.max">O
+                            valor máximo é de 8 dígitos!
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" class="form-control" name="senha" formControlName="senha">
+
+                    </div>
+                    <div *ngIf="fGroup.controls.senha.errors" class="text-center erros">
+                        <p *ngIf="fGroup.controls.senha.errors.pattern">
+                            Sua senha deve conter de 6 à 8 caracteres, <br>com pelo menos um número ou uma
+                            letra.
+                        </p>
+                    </div>
+                    <button type="submit" class="btn btn-light">Logar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

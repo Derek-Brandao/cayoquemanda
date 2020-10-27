@@ -1,0 +1,52 @@
+<div class="d-flex" id="wrapper">
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-light nav-color text-balck border-bottom">
+      <div class="toolbar" role="banner">
+        <strong>Anamnese Digital</strong>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="material-icons">
+                settings
+              </i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Editar meus dados</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-3 mt-2" *ngFor="let list of (alunosReqObs$ | async)?.data">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p class="text-center"> <strong > {{ list.nome }} </strong> </p>
+              <p class="card-text">RGM: {{ list.matricula}}</p>
+              <a href="#" class="btn btn-sm btn-primary">Ver Anamnese</a>
+              <a href="#" class="ml-2 btn btn-sm btn-danger">Deletar Aluno</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>

@@ -1,0 +1,1259 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+
+    <button mat-raised-button color="primary" class="bt" (click)="voltarParaHome()">Voltar</button>
+    <p>
+        Dados do Paciente:
+    </p>
+
+
+
+</mat-grid-list>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    HDA
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Anotações: {{anamnese.anotacoes_globais}}
+                </td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th scope="col">Paciente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Nome: {{anamnese.paciente.nome}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Idade: {{anamnese.paciente.idade}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    Sexo: {{anamnese.paciente.sexo}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cútis: {{anamnese.paciente.cor}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Estado civil: {{anamnese.paciente.estado_civil}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nacionalidade: {{anamnese.paciente.nacionalidade}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Orientação sexual: {{anamnese.paciente.posicionamento_sexual}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Religião: {{anamnese.paciente.religiao}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enfermaria: {{anamnese.paciente.enfermaria}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Leito: {{anamnese.paciente.leito}}
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    Data e Horário de Início: {{anamnese.paciente.hora_inicio}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Profissão: {{anamnese.paciente.profissao}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    Queixa principal: {{anamnese.paciente.queixa_principal}}
+                </td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th scope="col">ISDA</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th scope="col">
+                    Abdome
+                </th>
+            </tr>
+            <tr>
+                <td>Colon diarreia: {{anamnese.isda.abdome.colon_diarreia}}</td>
+            </tr>
+            <tr>
+                <td>Colon dor: {{anamnese.isda.abdome.colon_dor}}</td>
+            </tr>
+            <tr>
+                <td>Colon obstipação: {{anamnese.isda.abdome.colon_obstipacao}}</td>
+            </tr>
+            <tr>
+                <td>Colon prurido: {{anamnese.isda.abdome.colon_prurido}}</td>
+            </tr>
+            <tr>
+                <td>Colon sangramento: {{anamnese.isda.abdome.colon_sangramento}}</td>
+            </tr>
+            <tr>
+                <td>Estômago dispepsia: {{anamnese.isda.abdome.estomago_dispepsia}}</td>
+            </tr>
+            <tr>
+                <td>Estômago dor: {{anamnese.isda.abdome.estomago_dor}}</td>
+            </tr>
+            <tr>
+                <td>Estômago náuseas: {{anamnese.isda.abdome.estomago_nauseas}}</td>
+            </tr>
+            <tr>
+                <td>Estômago pirose: {{anamnese.isda.abdome.estomago_pirose}}</td>
+            </tr>
+            <tr>
+                <td>Figado dor: {{anamnese.isda.abdome.figado_dor}}</td>
+            </tr>
+            <tr>
+                <td>Figado Icterícia: {{anamnese.isda.abdome.figado_ictericia}}</td>
+            </tr>
+            <tr>
+                <td>Intestino diarreia: {{anamnese.isda.abdome.intestino_diarreia}}</td>
+            </tr>
+            <tr>
+                <td>Intestino distensão: {{anamnese.isda.abdome.intestino_distensao}}</td>
+            </tr>
+            <tr>
+                <td>Intestino dor: {{anamnese.isda.abdome.intestino_dor}}</td>
+            </tr>
+            <tr>
+                <td>Intestino esteatorreia: {{anamnese.isda.abdome.intestino_esteatorreia}}</td>
+            </tr>
+            <tr>
+                <td>Intestino hemorragia: {{anamnese.isda.abdome.intestino_hemorragia}}</td>
+            </tr>
+            <tr>
+                <td>Pâncreas diarreia: {{anamnese.isda.abdome.pancreas_diarreia}}</td>
+            </tr>
+            <tr>
+                <td>Pâncreas dor: {{anamnese.isda.abdome.pancreas_dor}}</td>
+            </tr>
+            <tr>
+                <td>Pâncreas náuseas: {{anamnese.isda.abdome.pancreas_nauseas}}</td>
+            </tr>
+            <tr>
+                <td>Alterações da parede abdominal : {{anamnese.isda.abdome.paredeabdominal_alteracao}}</td>
+            </tr>
+            <tr>
+                <td>Dor da parede abdominal: {{anamnese.isda.abdome.paredeabdominal_dor}}</td>
+            </tr>
+            <th scope="col">
+                Antecedentes
+            </th>
+            <tr>
+                <td>Parente com Alzheimer: {{anamnese.isda.antecedentes.familia_alzheimer}}</td>
+            </tr>
+            <tr>
+                <td> Cancer: {{anamnese.isda.antecedentes.familia_cancer_valor}}</td>
+            </tr>
+            <tr>
+                <td>Cancer especificação: {{anamnese.isda.antecedentes.familia_cancer_especifique}}</td>
+            </tr>
+            <tr>
+                <td>Cancer outros: {{anamnese.isda.antecedentes.familia_cancer_outros}}</td>
+            </tr>
+            <tr>
+                <td>Familíares com diabetes: {{anamnese.isda.antecedentes.familia_diabetes}}</td>
+            </tr>
+            <tr>
+                <td>Enxaqueca: {{anamnese.isda.antecedentes.familia_enxaqueca}}</td>
+            </tr>
+            <tr>
+                <td>Has: {{anamnese.isda.antecedentes.familia_has}}</td>
+            </tr>
+            <tr>
+                <td>Outros: {{anamnese.isda.antecedentes.familia_outros}}</td>
+            </tr>
+            <tr>
+                <td> Desenvolvimento psicomotor: {{anamnese.isda.antecedentes.pessoais_fisiologicos_desenvolvimento_psicomotor}}</td>
+            </tr>
+            <tr>
+                <td>Desenvolvimento Sexual: {{anamnese.isda.antecedentes.pessoais_fisiologicos_desenvolvimento_sexual}}</td>
+            </tr>
+            <tr>
+                <td>Gestação nascimento: {{anamnese.isda.antecedentes.pessoais_fisiologicos_gestacao_nascimento}}</td>
+            </tr>
+            <tr>
+                <td>Alergias: {{anamnese.isda.antecedentes.pessoais_patologico_alergias}}</td>
+            </tr>
+            <tr>
+                <td>Cirurgias: {{anamnese.isda.antecedentes.pessoais_patologico_cirurgias}}</td>
+            </tr>
+            <tr>
+                <td>Doenças atuais: {{anamnese.isda.antecedentes.pessoais_patologico_doencas_atuais}}</td>
+            </tr>
+            <tr>
+                <td>Doenças sofridas: {{anamnese.isda.antecedentes.pessoais_patologico_doencas_sofridas}}</td>
+            </tr>
+            <tr>
+                <td>Histórico patologico: {{anamnese.isda.antecedentes.pessoais_patologico_historia}}</td>
+            </tr>
+            <tr>
+                <td>Medicamentos  em uso{{anamnese.isda.antecedentes.pessoais_patologico_medicamentos_em_uso}}</td>
+            </tr>
+            <tr>
+                <td>Transfusão: {{anamnese.isda.antecedentes.pessoais_patologico_transfusoes}}</td>
+            </tr>
+            <th scope="col">
+                Coluna vertebral
+            </th>
+            <tr>
+                <td>Crepitação articular: {{anamnese.isda.coluna_vertebral.crepitacao_articular}}</td>
+            </tr>
+            <tr>
+                <td>Dor: {{anamnese.isda.coluna_vertebral.dor}}</td>
+            </tr>
+            <tr>
+                <td>Manifestação sistêmica: {{anamnese.isda.coluna_vertebral.manifestacao_sistemica}}</td>
+            </tr>
+            <tr>
+                <td>Rigidez: {{anamnese.isda.coluna_vertebral.rigidez}}</td>
+            </tr>
+            <tr>
+                <td>Sinais inflamatórios{{anamnese.isda.coluna_vertebral.sinais_inflamatorios}}</td>
+            </tr>
+            <th scope="col">
+                Ectoscopia
+            </th>
+
+            <tr>
+                <td>Fácies: {{anamnese.isda.ectoscopia.acies}}</td>
+            </tr>
+            <tr>
+                <td>Atitude e Decúbito: {{anamnese.isda.ectoscopia.atitude_decubito}}</td>
+            </tr>
+            <tr>
+                <td>Biotipo: {{anamnese.isda.ectoscopia.biotipo}}</td>
+            </tr>
+            <tr>
+                <td>Cacifo detalhe: {{anamnese.isda.ectoscopia.cacifo_detalhe}}</td>
+            </tr>
+            <tr>
+                <td>Cacifo presenca: {{anamnese.isda.ectoscopia.cacifo_presenca}}</td>
+            </tr>
+            <tr>
+                <td>Outras observacoes {{anamnese.isda.ectoscopia.ectoscopia_outras_observacoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_consistencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_descricao_edema}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_detalhes_consistencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_detalhes_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_detalhes_intensidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_detalhes_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_intensidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_presenca}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_temperatura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.edema_temperatura_detalhe}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.estado_geral}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.estado_hidratacao_quantificacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.estado_hidratacao_tipo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.estado_nutricional_estado}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.estado_nutricional_quantidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_cabelos_brilho}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_cabelos_coloracao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_cabelos_distribuicao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_cabelos_quantidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_cabelos_tipos_implatacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_unhas_cor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_unhas_formato}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.faneros_unhas_resistencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.interacoes_exp_facial}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.interacoes_exp_facial_detalhes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.interacoes_fala_linguagem}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.interacoes_fala_linguagem_detalhes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_adenomegalia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_alteracoes_pele}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_consistencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_descricao_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_mobilidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_presenca}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_quantidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_sensibilidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_tamanho}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_textura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.linfonodos_volume}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.mov_involuntarios}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.mov_involuntarios_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.mov_involuntarios_presenca}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.mucosas_coloracao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.mucosas_hidratacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.mucosas_lesoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.nivel_consciencia_lucidez}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.nivel_consciencia_orientacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_coloracao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_continuidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_elasticidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_espessura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_lesoes_elementares}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_mobilidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_sensibilidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_temperatura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_textura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_turgor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.pele_umidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.perfusao_capilar_lentificada_tempo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.perfusao_capilar_tipo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.postura_atitude}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.tecido_celular_subcutaneo_espasticidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.tecido_celular_subcutaneo_espessura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.ectoscopia.tecido_celular_subcutaneo_flacidez}}</td>
+            </tr>
+            <th scope="col">
+                Hábitos de vida
+            </th>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.ajustamento_familiar}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.alimentacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.atividades_fisicas}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.banho_frequencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.banho_ultimo_banho}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.banho_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.condicoes_sociais}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.consumo_alcool}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.contato_animais}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.contato_triatomineo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.drogas_outros}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.drogas_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.habitacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.lazer}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.padraosono_acorda_antes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.padraosono_acorda_durante}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.padraosono_demora_iniciar}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.padraosono_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.tabagismo_anos_maco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.tabagismo_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.habitos_de_vida.vida_conjugal}}</td>
+            </tr>
+
+            <th scope="col">
+                Músculos
+            </th>
+
+            <tr>
+                <td>{{anamnese.isda.musculos.atrofia_muscular}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.musculos.caibras}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.musculos.dificuldade_andar}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.musculos.dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.musculos.espasmos_musculares}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.musculos.fraqueza_muscular}}</td>
+            </tr>
+
+            <th scope="col">
+                Sistema Nervoso
+            </th>
+
+
+            <tr>
+                <td>{{anamnese.isda.nervoso.amnesia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.ausencias}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.automatismos}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.cefaleia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.convusoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_auditivos}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_consciencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_esfincterianos}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_funcoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_mancha}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_motricidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_sono}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.disturbios_visuais}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.outros}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.nervoso.tontura_vertigem}}</td>
+            </tr>
+
+            <th scope="col">
+                Sintomas gerais
+            </th>
+
+
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.alteracao_peso_presenca}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.alteracao_peso_tempo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.alteracao_peso_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.alteracao_peso_valor_peso}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.caibras}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.calafrios}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.cavidade_bucal_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.cavidade_bucal_halitose}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.cavidade_bucal_silose}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.cavidade_bucal_ulceracoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.faringe_disfagia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.faringe_dor_garganta}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.faringe_halitose}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.faringe_pigarro}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.faringe_ronco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.faringe_tosse}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.febre_presenca}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.febre_tempo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.febre_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_corrimento_nasal}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_diminuicao_olfato}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_dispneia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_epistaxe}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_espirros}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_obstrucao_nasal}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.nariz_prurido}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_dor_ocular}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_fotofobia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_olho_seco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_perda_visao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_prurido}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_queimacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.olhos_vermelhidao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.ouvido_otoragia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.ouvidos_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.ouvidos_otorreia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.ouvidos_tontura}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.ouvidos_zumbidos}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.quantidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.sintomas}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.sudoreses}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sintomas_gerais.tempo}}</td>
+            </tr>
+
+            <th scope="col">
+                Sistema geniturinário
+            </th>
+
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_feminino_corrimento}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_feminino_hemorragia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_feminino_prurido}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_masculino_corrimento}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_masculino_disfuncoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_masculino_hemospernia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_masculino_lesoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_masculino_nodulos}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.orgaosgenitais_masculino_priapismo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_alt_cheiro_urina}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_alt_cor_urina}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_alt_miccionais}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_alt_volume_urinario}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_edema}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_geniturinario.rins_febre}}</td>
+            </tr>
+
+            <th scope="col">
+                Sistema hemolinfopoiético
+            </th>
+
+            <tr>
+                <td>{{anamnese.isda.sistema_hemolinfopetico.adenomegalia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_hemolinfopetico.astenia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_hemolinfopetico.esplenomegalia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_hemolinfopetico.hemorragia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.sistema_hemolinfopetico.hepatomegalia}}</td>
+            </tr>
+
+            <th scope="col">
+                Torax
+            </th>
+
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_alteracoes_sono}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_astenia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_cianose}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_desmaio_esforco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_edema}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_intolerancia_esforcos}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.coracao_palpitacoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.diafragma_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.diafragma_sintomas_compressao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.diafragma_soluco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.esofago_disfagia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.esofago_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.esofago_hematemese}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.esofago_odinofagia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.esofago_pirose}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.esofago_regurgitacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.mamas_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.mamas_nodulo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.mamas_secrecao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.parede_toraxica_dispineia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.parede_toraxica_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_chieira}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_estridor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_expectoracao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_hemoptise}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_tosse}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_triagem}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.isda.torax.traqueia_vomica}}</td>
+            </tr>
+
+        </thead>
+        <thead>
+            <tr>
+                <th scope="col">
+                    Exame Físico
+                </th>
+            </tr>
+    
+            <tr>
+                <th scope="col">
+                    Exame do abdome
+                </th>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_cicatriz_cirurgica}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_cicatriz_cirurgica_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_cicatriz_umbilical}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_presenca_circulacao_colateral}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_presenca_circulacao_colateral_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_presenca_de_retratacoes}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_presenca_de_retratacoes_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_pulsatilidade_da_aorta}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_sinal_de_culen}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_sinal_de_gray_turner}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_tipo_cicatriz_umbilical}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_inspecao_tipo_do_abdome}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_lemostorres_borda}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_lemostorres_consistencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_lemostorres_dolorosa}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_lemostorres_palpavel}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_lemostorres_superficie}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_manobra_de_shuster_palpavel}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_mathieu_borda}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_mathieu_consistencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_mathieu_dolorosa}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_mathieu_palpavel}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_mathieu_superficie}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_sinal_de_blemberg}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_manobrasespeciais_sinal_de_murphy}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_palpacao_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_palpacao_dor_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_palpacao_massas_abdominais}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_palpacao_massas_abdominais_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_palpacao_tensao_abdominal}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_esplenomegalia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_esplenomegalia_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_hepatomegalia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_hepatomegalia_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_macizez_movel_de_decubito}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_presenca_de_massas}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_presenca_de_massas_descricao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_sinal_de_piparote}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.abdome_percussao_som}}</td>
+            </tr>
+            <tr>
+                <th scope="=col">
+                    Exame cardiovascular
+                </th>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_auscultacardiaca_frequencia_cardiaca}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_auscultacardiaca_intensidade_do_som}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_auscultacardiaca_ritmo_cardiaco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_auscultacarotidea_presenca_de_sopro}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_fremitocardiovascular_intensidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_fremitocardiovascular_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_fremitocardiovascular_situacao_ciclo_cardiaco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_fremitocardiovascular_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_intensidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_lesoes_elementares}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_localizacao_fremito}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_polpas_digitais}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_presenca_de_abaulamento}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_situacao_do_ciclo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_tipo_polpa_digital}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_inspecaoepalpacao_turgencia_jugular}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_soprocardiaco_foco}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_soprocardiaco_intensidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.cardiovascular_soprocardiaco_relacao_ciclo_cardiaco}}</td>
+            </tr>
+        
+            <tr>
+                <th scope="=col">
+                    Exame respiratório
+                </th>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_atritopleural_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_atritopleural_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_auscultavoz_ressonancia_aumentada}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_auscultavoz_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_estritor_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_estritor_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_estritorfino_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_estritorfino_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_estritorgrosso_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_estritorgrosso_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_murmurio_vesicular_presente}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_murmurio_vesicular_sonoridade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_murmuriovesicular_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_murmuriovesicular_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_roncos_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_roncos_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_sibilos_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_sibilos_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_sopro_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_auscultapulmonar_sopro_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_ftv_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_ftv_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_localizacao_percussao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_macico}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_manobra_de_lasengue}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_manobra_de_ruault}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_percussao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_dorirradia_frequencia}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_dorirradia_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_fatores_que_pioram_a_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_frenquencia_da_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_intensidade}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_intensidade_da_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_presencadedor_tipo_da_dor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_submacico_localizacao}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_submacico_valor}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_palpacao_timpanico}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_papacao_som_pulmonar}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_presencacicatriz_motivo}}</td>
+            </tr>
+            <tr>
+                <td>{{anamnese.exame_fisico.respiratorio_presencacicatriz_valor}}</td>
+            </tr>
+        
+        
+        
+        
+    
+        </thead>
+    </table>
+</div>
+
