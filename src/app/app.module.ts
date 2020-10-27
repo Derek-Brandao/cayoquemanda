@@ -20,6 +20,7 @@ import { ErrorInterceptor } from './helpers/error.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { AlertService } from './services/alerts/alert.service';
+import { HeaderComponent } from './shared/header/header.component';
 
 
 
@@ -31,6 +32,7 @@ import { AlertService } from './services/alerts/alert.service';
     DetalhesComponent,
     LoginComponent,
     CadastroComponent,
+    HeaderComponent,
   ],
   imports: [
     FormsModule,
