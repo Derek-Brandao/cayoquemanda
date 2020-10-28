@@ -16,7 +16,9 @@ import { AlertService } from '../services/alerts/alert.service';
   styleUrls: ['./alunos-listagem.component.css']
 })
 export class AlunosListagemComponent implements OnInit {
-
+  
+  items = [];
+  pageOfItems: Array<any>;
   alunosReqObs$: Observable<Aluno[]>;
   anamneseDelete: Aluno[];
 
@@ -32,8 +34,11 @@ export class AlunosListagemComponent implements OnInit {
 
   ngOnInit() {
     this.getAlunosHttpRequest();
-    this.getAlunosHttpRequestErros();
+    this.getAlunosHttpRequestErros() 
   }
+
+
+  
 
   /*
   goToDetalhesByState(aluno: Aluno) {
@@ -48,12 +53,13 @@ export class AlunosListagemComponent implements OnInit {
 
   getAlunosHttpRequest() {
     this.alunosReqObs$ = this.aluno.getAlunos();
+    this.items.push(this.aluno.getAlunos());
   }
 
   getAlunosHttpRequestErros() {
     this.aluno.getAlunos()
-      .subscribe((alunos) => {
-        console.log(alunos);
+      .subscribe((pages) => {
+        console.log(pages);
       },
         (err) => {
           if (err.status === 0) {
