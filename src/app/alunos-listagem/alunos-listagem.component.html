@@ -6,7 +6,7 @@
         <div class="card-body">
           <p class="text-center title"> <strong> {{ aluno.nome }} </strong> </p>
           <p class="card-text rgm">RGM: {{ aluno.matricula }}</p>
-          <a href="#" class="btn btn-sm btn-primary">Ver Anamnese</a>
+          <button type="button" (click)="verAnamnese(aluno)" class="btn btn-sm btn-primary">Ver Anamnese</button>
           <button type="button" (click)="deleteAlunosHttpRequest(aluno)" class="ml-2 btn btn-sm btn-danger">Deletar Aluno</button>
         </div>
       </div>

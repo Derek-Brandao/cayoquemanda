@@ -9,7 +9,6 @@ import { AlunosListagemComponent } from './alunos-listagem/alunos-listagem.compo
 
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
-import { DetalhesComponent } from './alunos-listagem/detalhes/detalhes.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -22,6 +21,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { AlertService } from './services/alerts/alert.service';
 import { HeaderComponent } from './shared/header/header.component';
 import { JwPaginationComponent } from '../../node_modules/jw-angular-pagination';
+import { AnamneseComponent } from './anamnese/anamnese.component';
 
 
 
@@ -31,11 +31,11 @@ import { JwPaginationComponent } from '../../node_modules/jw-angular-pagination'
     AppComponent,
     NavBarComponent,
     AlunosListagemComponent,
-    DetalhesComponent,
     LoginComponent,
     CadastroComponent,
     HeaderComponent,
     JwPaginationComponent,
+    AnamneseComponent,
   ],
   imports: [
     FormsModule,

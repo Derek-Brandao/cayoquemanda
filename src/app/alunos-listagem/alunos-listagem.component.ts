@@ -40,9 +40,7 @@ export class AlunosListagemComponent implements OnInit {
   /*
   goToDetalhesByState(aluno: Aluno) {
 
-    this.router.navigateByUrl('/detalhes', {
-      state: aluno
-    });
+    
 
   }
 */
@@ -83,6 +81,10 @@ export class AlunosListagemComponent implements OnInit {
     
   }
 
+  verAnamnese(aluno: Aluno){
+    this.router.navigateByUrl('/anamese', { state: { aluno: aluno } });
+  }
+
   onChangePage(pageOfItems: Array<any>) {
     // update current page of items
     this.pageOfItems = pageOfItems;
@@ -92,47 +94,5 @@ export class AlunosListagemComponent implements OnInit {
     location.reload()
   }
 
-  /*
-  getAlunosHttpRequestErros() {
-    this.aluno.getAlunos()
-      .subscribe((pages) => {
 
-
-      },
-        (err) => {
-          if (err.status === 0) {
-            this.alert.openSnackBar('Sem resposta da API, verifique sua conexão ou tente nomanete', 'Ok');
-          }
-        }
-
-      );
-  }
-
-  onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
-    this.pageOfItems = pageOfItems;
-  }
-
-  /*
-    loadAnamnese() {
-      this.anamneseService.getAnameses().subscribe((anam) => this.anamneseDelete = anam);
-    }
-  
-    delete(anamnese: Anamnese) {
-      this.anamneseService.deleteAnamnese(anamnese).subscribe(
-        (res) => {
-          let i = this.anamneseDelete.findIndex(aname => anamnese.id == aname.id);
-          if (i >= 0) {
-            this.anamneseDelete.slice(i, 1);
-            location.reload();
-          }
-        },
-        (err) => {
-          {
-            console.log(err);
-            location.reload();
-          }
-        }
-      );
-    }*/
 }

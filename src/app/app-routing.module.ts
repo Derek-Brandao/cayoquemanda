@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DetalhesComponent } from './alunos-listagem/detalhes/detalhes.component';
 import { AlunosListagemComponent } from './alunos-listagem/alunos-listagem.component';
 import { LoginComponent } from './login/login.component'
 import { AuthGuard } from './helpers/auth.guard';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { AnamneseComponent } from './anamnese/anamnese.component';
 
 
 const routes: Routes = [
@@ -13,15 +13,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  }, {
-    path: 'home',
-    component: AlunosListagemComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'detalhes',
-    component: DetalhesComponent,
-    canActivate: [AuthGuard],
   },
   {
     path: 'login',
@@ -30,6 +21,16 @@ const routes: Routes = [
   {
     path: 'cadProfMed',
     component: CadastroComponent
+  },
+  {
+    path: 'home',
+    component: AlunosListagemComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'anamese',
+    component: AnamneseComponent,
+    canActivate: [AuthGuard],
   },
 
 ];

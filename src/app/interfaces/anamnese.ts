@@ -1,5 +1,11 @@
-export interface Anamnese{
-    anotacoes_globais: string;
+export interface Anamnese {
+    aluno_id: number,
+    comentario: string,
+    nota: number,
+    membros_equipe: string,
+    nome_professor: string,
+    professor_id: number,
+    anotacoes_globais: string,
     paciente: {
         cor: string,
         enfermaria: string,
@@ -14,8 +20,9 @@ export interface Anamnese{
         queixa_principal: string,
         religiao: string,
         sexo: string
+        local_saude: string,
     };
-    id: string ;
+    id: string;
     isda: {
         abdome: {
             colon_diarreia: string,
