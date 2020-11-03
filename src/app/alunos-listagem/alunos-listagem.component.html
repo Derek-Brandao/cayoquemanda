@@ -1,25 +1,20 @@
 <app-header></app-header>
 <div class="container-fluid">
   <div class="row mt-5">
-    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-2" *ngFor="let list of (alunosReqObs$ | async)?.data">
-      <div class="card" style="width: 18rem;">
+    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-2" *ngFor="let aluno of pageOfItems">
+      <div class="card" style="width: rem;">
         <div class="card-body">
-          <p class="text-center title"> <strong> {{ list.nome }} </strong> </p>
-          <p class="card-text rgm">RGM: {{ list.matricula}}</p>
+          <p class="text-center title"> <strong> {{ aluno.nome }} </strong> </p>
+          <p class="card-text rgm">RGM: {{ aluno.matricula }}</p>
           <a href="#" class="btn btn-sm btn-primary">Ver Anamnese</a>
-          <a href="#" class="ml-2 btn btn-sm btn-danger">Deletar Aluno</a>
+          <button type="button" (click)="deleteAlunosHttpRequest(aluno)" class="ml-2 btn btn-sm btn-danger">Deletar Aluno</button>
         </div>
       </div>
     </div>
-    <div class="col-12 text-center">
-      <div class="card text-center m-3">
-        <div class="card-footer pb-0 pt-3">
-          <jw-pagination [items]="items" (changePage)="onChangePage($event)">
-
-
-          </jw-pagination>
-        </div>
-      </div>
+  </div>
+  <div class="row mt-5 mx-auto" style="width: 500px;">
+    <div class="col-sm-12 col-md-12 col-xl-12 text-center">
+      <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
     </div>
   </div>
 </div>

@@ -10,6 +10,9 @@ export class ApiService {
   //readonly url: string = 'http://localhost:5000/';
 
   //Nome dos EndPoints
+  
+  public deleteAllAnamneseAluno = "api/anamneses/";
+  public deleteAluno = "api/paluno/";
   public listarAlunos = "api/alunos";
   public cadastrarProfessor = "api/professor/cadastrar";
   public autenticarProfessor = "api/professor/autenticar";

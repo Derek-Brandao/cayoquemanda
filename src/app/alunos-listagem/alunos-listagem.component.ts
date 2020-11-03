@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Aluno } from '../interfaces/aluno';
-import { MatSnackBar, MatSnackBarConfig } from '@angular/material';;
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { AlunosService } from '../services/alunos/alunos.service';
 import { AlertService } from '../services/alerts/alert.service';
+import { AuthService } from '../services/authentication/auth.service';
 
 
 
@@ -16,29 +16,26 @@ import { AlertService } from '../services/alerts/alert.service';
   styleUrls: ['./alunos-listagem.component.css']
 })
 export class AlunosListagemComponent implements OnInit {
-  
+  isLoadingResults = false;
   items = [];
   pageOfItems: Array<any>;
   alunosReqObs$: Observable<Aluno[]>;
   anamneseDelete: Aluno[];
-
+  returnUrl: string;
 
   constructor(
     private aluno: AlunosService,
     public router: Router,
-    private location: Location,
-    public alert: AlertService
+    private route: ActivatedRoute,
+    public alert: AlertService,
+    private authService: AuthService,
+    private location: Location
   ) {
   }
-  
 
   ngOnInit() {
     this.getAlunosHttpRequest();
-    this.getAlunosHttpRequestErros() 
   }
-
-
-  
 
   /*
   goToDetalhesByState(aluno: Aluno) {
@@ -49,17 +46,58 @@ export class AlunosListagemComponent implements OnInit {
 
   }
 */
-
-
   getAlunosHttpRequest() {
-    this.alunosReqObs$ = this.aluno.getAlunos();
-    this.items.push(this.aluno.getAlunos());
+    this.aluno.getAlunos().subscribe(
+      (result) => {
+        this.items = result;
+      },
+      (erro) => {
+        this.alert.openSnackBar(erro, "Ok");
+        this.authService.logout();
+        this.router.navigate([this.returnUrl]);
+      }
+    );
+
   }
 
+  deleteAlunosHttpRequest(aluno: Aluno) {
+    this.aluno.deleteAluno(aluno).subscribe((res) => {
+      this.alert.openSnackBar(res, "Ok");
+      this.load();
+    },
+      (erro) => {
+        this.alert.openSnackBar(erro, "Ok")
+        this.load();
+      }
+    );
+
+    this.aluno.deleteAllAnamneseAluno(aluno).subscribe((res) => {
+      
+      this.load();
+    },
+      (erro) => {
+        this.alert.openSnackBar(erro, "Ok")
+        this.load();
+      }
+    );
+    
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+  }
+
+  load() {
+    location.reload()
+  }
+
+  /*
   getAlunosHttpRequestErros() {
     this.aluno.getAlunos()
       .subscribe((pages) => {
-        console.log(pages);
+
+
       },
         (err) => {
           if (err.status === 0) {
@@ -70,28 +108,31 @@ export class AlunosListagemComponent implements OnInit {
       );
   }
 
-
-
-/*
-  loadAnamnese() {
-    this.anamneseService.getAnameses().subscribe((anam) => this.anamneseDelete = anam);
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
   }
 
-  delete(anamnese: Anamnese) {
-    this.anamneseService.deleteAnamnese(anamnese).subscribe(
-      (res) => {
-        let i = this.anamneseDelete.findIndex(aname => anamnese.id == aname.id);
-        if (i >= 0) {
-          this.anamneseDelete.slice(i, 1);
-          location.reload();
+  /*
+    loadAnamnese() {
+      this.anamneseService.getAnameses().subscribe((anam) => this.anamneseDelete = anam);
+    }
+  
+    delete(anamnese: Anamnese) {
+      this.anamneseService.deleteAnamnese(anamnese).subscribe(
+        (res) => {
+          let i = this.anamneseDelete.findIndex(aname => anamnese.id == aname.id);
+          if (i >= 0) {
+            this.anamneseDelete.slice(i, 1);
+            location.reload();
+          }
+        },
+        (err) => {
+          {
+            console.log(err);
+            location.reload();
+          }
         }
-      },
-      (err) => {
-        {
-          console.log(err);
-          location.reload();
-        }
-      }
-    );
-  }*/
+      );
+    }*/
 }
