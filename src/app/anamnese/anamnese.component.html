@@ -1,1 +1,25 @@
-<p>anamnese works!</p>
+<div *ngFor="let resposta of anamnese">
+{{ resposta.aluno_id }}
+</div>
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-2" *ngFor="let item of pageOfItems">
+      <div class="card" style="width: rem;">
+        <div class="card-body">
+          <p class="text-center title"> <strong> {{ item.local_saude }} </strong> </p>
+          <p class="card-text rgm">Equipe: {{ item.membros_equipe}}</p>
+          <p class="card-text rgm">Nome do paciente: {{ item.paciente.nome}}</p>
+          <p class="card-text rgm">Criada em: {{ item.created_at | date:'dd/MM/yyyy , h:mm a'}}</p>
+          <button type="button" (click)="verAnamnese(aluno)" class="btn btn-sm btn-primary">Ver detalhada</button>
+          <button type="button" (click)="deleteAlunosHttpRequest(aluno)" class="ml-2 btn btn-sm btn-info">Avalilar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mx-auto" style="width: 500px;">
+    <div class="col-sm-12 col-md-12 col-xl-12 text-center">
+      <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+  </div>
+</div>

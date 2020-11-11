@@ -20,8 +20,6 @@ export class AnamneseService {
   ) { }
 
   getAnamnese(): Observable<Anamnese[]> {
-    return this.http.get<Anamnese[]>(`${this.api.url + this.api.anamnese}`).pipe(map(result => {
-      return result['data'];
-    }));
+    return this.http.get<Anamnese[]>(`${this.api.url + this.api.anamnese}`).pipe(map(result => result['data']));
   }
 }

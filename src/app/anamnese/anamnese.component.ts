@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Aluno } from '../interfaces/aluno';
+import { Anamnese } from '../interfaces/anamnese';
 import { AnamneseService } from '../services/anamnese/anamnese.service';
 
 
@@ -10,34 +12,39 @@ import { AnamneseService } from '../services/anamnese/anamnese.service';
   styleUrls: ['./anamnese.component.css']
 })
 export class AnamneseComponent implements OnInit {
-
+  items: Anamnese[];
+  pageOfItems: Array<any>;
   aluno: Aluno;
+  returnUrl: string;
+  professor: number;
 
   constructor(
     private router: Router,
     private anamneseService: AnamneseService
   ) {
-
+    
+    this.professor = JSON.parse(localStorage.getItem('matricula'));
     const nav = this.router.getCurrentNavigation();
     this.aluno = nav.extras.state.aluno;
-
-  }
-
-  ngOnInit() {
-    console.log(this.aluno.matricula);
     this.getAnamneseHttpRequest();
   }
-
+  
+  ngOnInit() {
+    console.log(this.professor);
+  }
+  
   getAnamneseHttpRequest() {
     this.anamneseService.getAnamnese().subscribe((result) => {
-      result.find(res => {
-        res.aluno_id == this.aluno.matricula;
-      },
-
-      );
-    })
-
+      this.items = result.filter((res) => {
+        return res.aluno_id === this.aluno.matricula;
+      });
+      console.log(this.items);
+    });
   }
 
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+  }
 
 }

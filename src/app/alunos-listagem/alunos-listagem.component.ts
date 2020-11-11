@@ -26,24 +26,15 @@ export class AlunosListagemComponent implements OnInit {
   constructor(
     private aluno: AlunosService,
     public router: Router,
-    private route: ActivatedRoute,
     public alert: AlertService,
     private authService: AuthService,
-    private location: Location
   ) {
   }
 
   ngOnInit() {
     this.getAlunosHttpRequest();
   }
-
-  /*
-  goToDetalhesByState(aluno: Aluno) {
-
-    
-
-  }
-*/
+  
   getAlunosHttpRequest() {
     this.aluno.getAlunos().subscribe(
       (result) => {
@@ -70,7 +61,7 @@ export class AlunosListagemComponent implements OnInit {
     );
 
     this.aluno.deleteAllAnamneseAluno(aluno).subscribe((res) => {
-      
+
       this.load();
     },
       (erro) => {
@@ -78,10 +69,10 @@ export class AlunosListagemComponent implements OnInit {
         this.load();
       }
     );
-    
+
   }
 
-  verAnamnese(aluno: Aluno){
+  verAnamnese(aluno: Aluno) {
     this.router.navigateByUrl('/anamese', { state: { aluno: aluno } });
   }
 
