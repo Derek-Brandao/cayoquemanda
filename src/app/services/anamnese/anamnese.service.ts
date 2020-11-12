@@ -20,6 +20,17 @@ export class AnamneseService {
   ) { }
 
   getAnamnese(): Observable<Anamnese[]> {
-    return this.http.get<Anamnese[]>(`${this.api.url + this.api.anamnese}`).pipe(map(result => result['data']));
+    return this.http.get<Anamnese[]>(`${this.api.url + this.api.anamnese}`).pipe(map(result => {
+      const profMatricula = Number(window.localStorage.getItem('matricula'));
+
+      const listaAnamneses: Anamnese[] = result['data'];
+
+      // Filtra anamneses feitas para o professor que está logado
+      const listaAnamnesesProfessor = listaAnamneses.filter((anamnese) => {
+        return anamnese.professor_id === profMatricula ? anamnese : null;
+      });
+
+      return listaAnamnesesProfessor;
+    }));
   }
 }
