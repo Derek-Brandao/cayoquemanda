@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 import { Aluno } from '../../interfaces/aluno';
 import { Router } from '@angular/router';
 import { ApiService } from '../url/api.service';
@@ -20,8 +20,35 @@ export class AlunosService {
   ) { }
 
   getAlunos(): Observable<Aluno[]> {
-    return this.http.get<Aluno[]>(`${this.api.url + this.api.listarAlunos}`).pipe(map(result => {
-      return result['data'];
+    return forkJoin([
+      this.http.get(`${ this.api.url + this.api.anamnese}`),
+      this.http.get<Aluno[]>(`${this.api.url + this.api.listarAlunos}`),
+    ]).pipe(map((dados: any[]) => {
+
+      const profMatricula = Number(window.localStorage.getItem('matricula'));
+
+      const [anamneses, alunos] = dados;
+
+      const { data: dataAnamnese } = anamneses;
+      const { data: dataAlunos } = alunos;
+
+      // Filtra as anamneses feitas para o professor que está logado
+      const listaAnamnesesProfessor = dataAnamnese.filter((anamnese: any) => {
+        return anamnese.professor_id === profMatricula ? anamnese : null;
+      });
+
+
+      // Filtra os alunos que enviaram anamneses para o professor
+      const listaAlunos = dataAlunos.filter((aluno: any, index: number) => {
+        const alunoAnamnses = !!listaAnamnesesProfessor
+          .find((anamneseItem: any) =>
+            anamneseItem.aluno_id === aluno.matricula
+          );
+
+        return alunoAnamnses ? aluno : null;
+        });
+
+      return listaAlunos;
     }));
   }
 
@@ -36,5 +63,5 @@ export class AlunosService {
       return result['message'];
     }));
   }
-  
+
 }
