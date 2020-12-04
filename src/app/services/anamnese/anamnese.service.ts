@@ -33,4 +33,10 @@ export class AnamneseService {
       return listaAnamnesesProfessor;
     }));
   }
+
+  addFeedback(id: string, feedback: any): Observable<any> {
+    console.log(typeof id);
+    console.log(id);
+    return this.http.put(`${this.api.url + this.api.AtualizaAnamnese + id}`, feedback);
+  }
 }

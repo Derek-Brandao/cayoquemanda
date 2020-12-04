@@ -22,17 +22,17 @@ export class AnamneseComponent implements OnInit {
     private router: Router,
     private anamneseService: AnamneseService
   ) {
-    
+
     this.professor = JSON.parse(localStorage.getItem('matricula'));
     const nav = this.router.getCurrentNavigation();
     this.aluno = nav.extras.state.aluno;
     this.getAnamneseHttpRequest();
   }
-  
+
   ngOnInit() {
     console.log(this.professor);
   }
-  
+
   getAnamneseHttpRequest() {
     this.anamneseService.getAnamnese().subscribe((result) => {
       this.items = result.filter((res) => {
@@ -45,6 +45,13 @@ export class AnamneseComponent implements OnInit {
   onChangePage(pageOfItems: Array<any>) {
     // update current page of items
     this.pageOfItems = pageOfItems;
+  }
+
+  avaliarAnamnese(item: Anamnese) {
+    // console.log(item);
+    this.router.navigateByUrl('/avaliarAnamnese', {state: {
+      anamnese: item,
+    }});
   }
 
 }

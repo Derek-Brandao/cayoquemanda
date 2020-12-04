@@ -1,0 +1,10 @@
+.erros {
+  color: rgb(236, 32, 32);
+}
+
+.container-anamnese {
+  overflow-y: auto;
+  /* height: 90vh; */
+
+  /* background-color: blue; */
+}

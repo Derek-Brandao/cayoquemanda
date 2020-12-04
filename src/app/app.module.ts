@@ -22,6 +22,7 @@ import { AlertService } from './services/alerts/alert.service';
 import { HeaderComponent } from './shared/header/header.component';
 import { JwPaginationComponent } from '../../node_modules/jw-angular-pagination';
 import { AnamneseComponent } from './anamnese/anamnese.component';
+import { AvaliaAnamneseComponent } from './avalia-anamnese/avalia-anamnese.component';
 
 
 
@@ -36,6 +37,7 @@ import { AnamneseComponent } from './anamnese/anamnese.component';
     HeaderComponent,
     JwPaginationComponent,
     AnamneseComponent,
+    AvaliaAnamneseComponent,
   ],
   imports: [
     FormsModule,
@@ -46,17 +48,16 @@ import { AnamneseComponent } from './anamnese/anamnese.component';
     HttpClientModule,
     ReactiveFormsModule,
     AlertModule,
-    
     ],
-  providers: [ 
+  providers: [
     AlertService,
-    AuthGuard, 
+    AuthGuard,
     AuthService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-  
+
   ],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }

@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="container-md mt-3">
+    <h2>Feedback do Professor</h2>
+      <hr>
+      <form [formGroup]="fGroup">
+        <div class="form-group">
+          <label for="comentario">Comentário</label>
+          <textarea class="form-control ng-pristine ng-invalid ng-touched" id="comentario" formControlName="comentario" rows="3"></textarea>
+        </div>
+        <div *ngIf="fGroup.controls.comentario.errors" class="text-center erros">
+          <p *ngIf="fGroup.controls.comentario.errors.max">
+            É permitido no máximo 500 caracteres!
+          </p>
+        </div>
+
+        <!--  -->
+
+        <div class="form-group">
+          <label for="nota">Nota</label>
+          <input min="0" max="10" type="number" class="form-control" formControlName="nota" id="nota" />
+        </div>
+        <div *ngIf="fGroup.controls.nota.errors" class="text-center erros">
+          <p *ngIf="fGroup.controls.nota.errors.min">
+            Nota miníma é de 0!
+          </p>
+          <p *ngIf="fGroup.controls.nota.errors.max">
+            Nota miníma é de 10!
+          </p>
+        </div>
+
+        <button class="btn btn-info" (click)="enviarFeedback(fGroup.value)" type="submit">Enviar Feedback</button>
+      </form>
+  </div>
+</div>
