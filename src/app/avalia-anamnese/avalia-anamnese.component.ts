@@ -21,8 +21,8 @@ export class AvaliaAnamneseComponent implements OnInit {
     private Aservices: AnamneseService,
     private Alert: AlertService,
   ) {
-    const nav = this.routes.getCurrentNavigation();
-    this.anamnese = nav.extras.state.anamnese;
+    // const nav = this.routes.getCurrentNavigation();
+    this.anamnese = JSON.parse(window.localStorage.getItem('current_anamnese'));
   }
 
   ngOnInit() {
@@ -35,10 +35,17 @@ export class AvaliaAnamneseComponent implements OnInit {
     });
   }
 
-  enviarFeedback(dados: NgForm) {
-    console.log(dados);
+  enviarFeedback(dados: any) {
+    console.log(parseFloat(dados.nota));
+    console.log(typeof dados.nota);
+
+    const data = {
+      comentario: dados.comentario,
+      nota: parseFloat(dados.nota)
+    };
+
     const anamneseId = this.anamnese.id;
-    this.Aservices.addFeedback(anamneseId, dados).subscribe(
+    this.Aservices.addFeedback(anamneseId, data).subscribe(
       res => {
         this.routes.navigate(['/home']);
         this.Alert.openSnackBar('Cadastrado com sucesso!',  'Ok');

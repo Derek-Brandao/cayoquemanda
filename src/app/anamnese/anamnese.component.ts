@@ -24,8 +24,8 @@ export class AnamneseComponent implements OnInit {
   ) {
 
     this.professor = JSON.parse(localStorage.getItem('matricula'));
-    const nav = this.router.getCurrentNavigation();
-    this.aluno = nav.extras.state.aluno;
+    // const nav = this.router.getCurrentNavigation();
+    this.aluno = JSON.parse(window.localStorage.getItem('current_aluno'));
     this.getAnamneseHttpRequest();
   }
 
@@ -48,6 +48,7 @@ export class AnamneseComponent implements OnInit {
   }
 
   avaliarAnamnese(item: Anamnese) {
+    window.localStorage.setItem('current_anamnese', JSON.stringify(item));
     // console.log(item);
     this.router.navigateByUrl('/avaliarAnamnese', {state: {
       anamnese: item,

@@ -18,7 +18,7 @@
 
         <div class="form-group">
           <label for="nota">Nota</label>
-          <input min="0" max="10" type="number" class="form-control" formControlName="nota" id="nota" />
+          <input min="0" max="10" type="number" step="0.01" class="form-control" formControlName="nota" id="nota" />
         </div>
         <div *ngIf="fGroup.controls.nota.errors" class="text-center erros">
           <p *ngIf="fGroup.controls.nota.errors.min">

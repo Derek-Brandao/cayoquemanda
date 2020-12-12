@@ -34,7 +34,7 @@ export class AlunosListagemComponent implements OnInit {
   ngOnInit() {
     this.getAlunosHttpRequest();
   }
-  
+
   getAlunosHttpRequest() {
     this.aluno.getAlunos().subscribe(
       (result) => {
@@ -73,6 +73,7 @@ export class AlunosListagemComponent implements OnInit {
   }
 
   verAnamnese(aluno: Aluno) {
+    window.localStorage.setItem('current_aluno', JSON.stringify(aluno));
     this.router.navigateByUrl('/anamese', { state: { aluno: aluno } });
   }
 
