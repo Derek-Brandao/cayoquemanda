@@ -55,4 +55,8 @@ export class AnamneseComponent implements OnInit {
     }});
   }
 
+  anamneseDetalhada(item: Anamnese) {
+    window.localStorage.setItem('current_anamnese', JSON.stringify(item));
+    this.router.navigateByUrl('/anamneseDetalhada');
+  }
 }

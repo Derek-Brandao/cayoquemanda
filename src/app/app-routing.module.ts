@@ -6,6 +6,7 @@ import { AuthGuard } from './helpers/auth.guard';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AnamneseComponent } from './anamnese/anamnese.component';
 import { AvaliaAnamneseComponent } from './avalia-anamnese/avalia-anamnese.component';
+import { AnamneseDetalhadaComponent } from './anamnese-detalhada/anamnese-detalhada.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,11 @@ const routes: Routes = [
   {
     path: 'avaliarAnamnese',
     component: AvaliaAnamneseComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'anamneseDetalhada',
+    component: AnamneseDetalhadaComponent,
     canActivate: [AuthGuard],
   }
 

@@ -23,6 +23,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { JwPaginationComponent } from '../../node_modules/jw-angular-pagination';
 import { AnamneseComponent } from './anamnese/anamnese.component';
 import { AvaliaAnamneseComponent } from './avalia-anamnese/avalia-anamnese.component';
+import { AnamneseDetalhadaComponent } from './anamnese-detalhada/anamnese-detalhada.component';
 
 
 
@@ -38,6 +39,7 @@ import { AvaliaAnamneseComponent } from './avalia-anamnese/avalia-anamnese.compo
     JwPaginationComponent,
     AnamneseComponent,
     AvaliaAnamneseComponent,
+    AnamneseDetalhadaComponent,
   ],
   imports: [
     FormsModule,

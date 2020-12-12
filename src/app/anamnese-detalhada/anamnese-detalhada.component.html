@@ -1,0 +1,1640 @@
+<app-header></app-header>
+<div class="container my-3" id="print">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action active">Paciente</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nome: </p>
+      {{ anamnese.paciente.nome }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Idade: </p>
+      {{ anamnese.paciente.idade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cúrtis: </p>
+      {{ anamnese.paciente.cor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Estado Civil: </p>
+      {{ anamnese.paciente.estado_civil }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sexo: </p>
+      {{ anamnese.paciente.sexo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Orientação Sexual: </p>
+      {{ anamnese.paciente.posicionamento_sexual }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nacionalidade: </p>
+      {{ anamnese.paciente.nacionalidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Religião: </p>
+      {{ anamnese.paciente.religiao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Profissão: </p>
+      {{ anamnese.paciente.profissao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Enfermaria: </p>
+      {{ anamnese.paciente.enfermaria }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Queixa Principal: </p>
+      {{ anamnese.paciente.queixa_principal }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Antecedentes</li>
+
+    <li class="list-group-item bg-secondary text-white">Fisiológicos</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Gestação e nascimento: </p>
+      {{ anamnese.isda.antecedentes.pessoais_fisiologicos_gestacao_nascimento }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold"> Desenvolvimento psicomotor e neural: </p>
+      {{ anamnese.isda.antecedentes.pessoais_fisiologicos_desenvolvimento_psicomotor }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Desenvolvimento sexual: </p>
+      {{ anamnese.isda.antecedentes.pessoais_fisiologicos_desenvolvimento_sexual }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Patológico</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Doenças sofridas pelo paciente: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_doencas_sofridas }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Doenças atuais do paciente: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_doencas_atuais }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alergias: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_alergias }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cirurgias: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_cirurgias }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Transfusões sanguíneas: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_transfusoes }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">História obstétrica: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_historia }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Medicamentos em uso: </p>
+      {{ anamnese.isda.antecedentes.pessoais_patologico_medicamentos_em_uso }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Antecedente Familiar</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Enxaqueca: </p>
+      {{ anamnese.isda.antecedentes.familia_enxaqueca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Diabetes: </p>
+      {{ anamnese.isda.antecedentes.familia_diabetes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Has: </p>
+      {{ anamnese.isda.antecedentes.familia_has }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alzheimer: </p>
+      {{ anamnese.isda.antecedentes.familia_alzheimer }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Câncer: </p>
+      {{ anamnese.isda.antecedentes.familia_cancer_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Especifique: </p>
+      {{ anamnese.isda.antecedentes.familia_cancer_especifique }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Outros(Câncer): </p>
+      {{ anamnese.isda.antecedentes.familia_cancer_outros }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Outros antecedentes: </p>
+      {{ anamnese.isda.antecedentes.familia_outros }}
+    </li>
+  </ul>
+
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Hábitos de vida</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alimentação: </p>
+      {{ anamnese.isda.habitos_de_vida.alimentacao }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Habitação: </p>
+      {{ anamnese.isda.habitos_de_vida.habitacao }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Atividade física: </p>
+      {{ anamnese.isda.habitos_de_vida.atividades_fisicas }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lazer: </p>
+      {{ anamnese.isda.habitos_de_vida.lazer }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Consumo de álcool: </p>
+      {{ anamnese.isda.habitos_de_vida.consumo_alcool }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Uso de drogas ilícitas: </p>
+      {{ anamnese.isda.habitos_de_vida.drogas_valor }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tomou banho em: </p>
+      {{ anamnese.isda.habitos_de_vida.banho_valor }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Contato com animais: </p>
+      {{ anamnese.isda.habitos_de_vida.contato_animais }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Contato com triatomíneo: </p>
+      {{ anamnese.isda.habitos_de_vida.contato_triatomineo }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Condições sociais: </p>
+      {{ anamnese.isda.habitos_de_vida.condicoes_sociais }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ajustamento familiar: </p>
+      {{ anamnese.isda.habitos_de_vida.ajustamento_familiar }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Padrão de sono: </p>
+      {{ anamnese.isda.habitos_de_vida.padraosono_valor }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Padrão de sono: </p>
+      {{ anamnese.isda.habitos_de_vida.padraosono_valor }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Demora a iniciar o sono? </p>
+      {{ anamnese.isda.habitos_de_vida.padraosono_demora_iniciar }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Acorda durante a noite? </p>
+      {{ anamnese.isda.habitos_de_vida.padraosono_acorda_durante }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Acorda antes do horário? </p>
+      {{ anamnese.isda.habitos_de_vida.padraosono_acorda_antes}}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tabagismo: </p>
+      {{ anamnese.isda.habitos_de_vida.tabagismo_valor}}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Mês e ano: </p>
+      {{ anamnese.isda.habitos_de_vida.tabagismo_anos_maco}}
+    </li>
+  </ul>
+
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Sintomas gerais</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Apresenta Febre? </p>
+      {{ anamnese.isda.sintomas_gerais.febre_presenca }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de alteração de peso? </p>
+      {{ anamnese.isda.sintomas_gerais.alteracao_peso_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Peso: </p>
+      {{ anamnese.isda.sintomas_gerais.alteracao_peso_valor_peso }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alteração do peso: </p>
+      {{ anamnese.isda.sintomas_gerais.alteracao_peso_presenca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Em quanto tempo? </p>
+      {{ anamnese.isda.sintomas_gerais.alteracao_peso_tempo }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sudorese? </p>
+      {{ anamnese.isda.sintomas_gerais.sudoreses }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Calafrios? </p>
+      {{ anamnese.isda.sintomas_gerais.calafrios }}
+    </li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cãibras? </p>
+      {{ anamnese.isda.sintomas_gerais.caibras }}
+    </li>
+    <li class="list-group-item bg-secondary text-white">Olhos</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor ocular? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_dor_ocular }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Prurido? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_prurido }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Queimação ou Ardência? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_queimacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sensação de olho seco? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_olho_seco }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Diminuição ou perda da visão? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_perda_visao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Fotofobia? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_fotofobia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Vermelhidão? </p>
+      {{ anamnese.isda.sintomas_gerais.olhos_vermelhidao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Ouvidos</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.sintomas_gerais.ouvidos_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Otorreia? </p>
+      {{ anamnese.isda.sintomas_gerais.ouvidos_otorreia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Otorragia? </p>
+      {{ anamnese.isda.sintomas_gerais.ouvido_otoragia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Zumbidos? </p>
+      {{ anamnese.isda.sintomas_gerais.ouvidos_zumbidos }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Vertigem e tontura? </p>
+      {{ anamnese.isda.sintomas_gerais.ouvidos_tontura }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Nariz e cavidades paranasais</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Prurido? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_prurido }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Espirros? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_espirros }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Obstrução Nasal? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_obstrucao_nasal }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Corrimento Nasal? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_corrimento_nasal }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Epistaxe? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_epistaxe }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dispneia? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_dispneia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Diminuição do olfato? </p>
+      {{ anamnese.isda.sintomas_gerais.nariz_diminuicao_olfato }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Cavidade bucal e anexos</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sialose? </p>
+      {{ anamnese.isda.sintomas_gerais.cavidade_bucal_silose }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Halitose? </p>
+      {{ anamnese.isda.sintomas_gerais.cavidade_bucal_halitose }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.sintomas_gerais.cavidade_bucal_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ulcerações ou sangramento? </p>
+      {{ anamnese.isda.sintomas_gerais.cavidade_bucal_ulceracoes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor de garganta? </p>
+      {{ anamnese.isda.sintomas_gerais.faringe_dor_garganta }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Disfagia? </p>
+      {{ anamnese.isda.sintomas_gerais.faringe_disfagia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tosse? </p>
+      {{ anamnese.isda.sintomas_gerais.faringe_tosse }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Faringe halitose? </p>
+      {{ anamnese.isda.sintomas_gerais.faringe_halitose }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Pigarro? </p>
+      {{ anamnese.isda.sintomas_gerais.faringe_pigarro }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ronco? </p>
+      {{ anamnese.isda.sintomas_gerais.faringe_ronco }}
+    </li>
+  </ul>
+
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action active">Tórax</li>
+
+    <li class="list-group-item bg-secondary text-white">Parede torácica</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.torax.parede_toraxica_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dispneia? </p>
+      {{ anamnese.isda.torax.parede_toraxica_dispineia }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Mamas</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.torax.mamas_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nódulos? </p>
+      {{ anamnese.isda.torax.mamas_nodulo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Secreção mamilar? </p>
+      {{ anamnese.isda.torax.mamas_secrecao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Traqueia</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.torax.traqueia_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tosse? </p>
+      {{ anamnese.isda.torax.traqueia_tosse }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Expectoração? </p>
+      {{ anamnese.isda.torax.traqueia_expectoracao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Hemoptise? </p>
+      {{ anamnese.isda.torax.traqueia_hemoptise }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Vômica? </p>
+      {{ anamnese.isda.torax.traqueia_vomica }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Chieira? </p>
+      {{ anamnese.isda.torax.traqueia_chieira }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Estridor? </p>
+      {{ anamnese.isda.torax.traqueia_estridor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Triagem? </p>
+      {{ anamnese.isda.torax.traqueia_triagem }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Diafragma e Mediastino</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.torax.diafragma_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Soluço? </p>
+      {{ anamnese.isda.torax.diafragma_soluco }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sintomas de compressão? </p>
+      {{ anamnese.isda.torax.diafragma_sintomas_compressao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Coração e Grandes Vasos</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.torax.coracao_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Palpitações? </p>
+      {{ anamnese.isda.torax.coracao_palpitacoes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Desmaio e síncope? </p>
+      {{ anamnese.isda.torax.coracao_desmaio_esforco }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cianose? </p>
+      {{ anamnese.isda.torax.coracao_cianose }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Edemas? </p>
+      {{ anamnese.isda.torax.coracao_edema }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Astenia? </p>
+      {{ anamnese.isda.torax.coracao_astenia }}
+    </li>
+    <!-- <li class="list-group-item">
+      <p class="font-weight-bold">Dispneia? </p>
+      {{ anamnese.isda.torax }}
+    </li> -->
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alterações no Sono? </p>
+      {{ anamnese.isda.torax.coracao_alteracoes_sono }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intolerância aos esforcos? </p>
+      {{ anamnese.isda.torax.coracao_intolerancia_esforcos }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Esôfago</li>
+
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.torax.esofago_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Disfagia? </p>
+      {{ anamnese.isda.torax.esofago_disfagia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Odinofagia? </p>
+      {{ anamnese.isda.torax.esofago_odinofagia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Pirose? </p>
+      {{ anamnese.isda.torax.esofago_pirose }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Regurgitação? </p>
+      {{ anamnese.isda.torax.esofago_regurgitacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Hematêmese? </p>
+      {{ anamnese.isda.torax.esofago_hematemese }}
+    </li>
+  </ul>
+
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action active">Abdome</li>
+
+    <li class="list-group-item bg-secondary text-white">Parede Abdominal</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.abdome.paredeabdominal_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alteração? </p>
+      {{ anamnese.isda.abdome.paredeabdominal_alteracao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Pâncreas</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.abdome.pancreas_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Diarreia? </p>
+      {{ anamnese.isda.abdome.pancreas_diarreia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nauseas? </p>
+      {{ anamnese.isda.abdome.pancreas_nauseas }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Fígado</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.abdome.figado_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Icterícia? </p>
+      {{ anamnese.isda.abdome.figado_ictericia }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Estômago</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.abdome.estomago_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nauseas? </p>
+      {{ anamnese.isda.abdome.estomago_nauseas }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dispepsia? </p>
+      {{ anamnese.isda.abdome.estomago_dispepsia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Pirose? </p>
+      {{ anamnese.isda.abdome.estomago_pirose }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Intestino Delgado</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.abdome.intestino_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Diarreia? </p>
+      {{ anamnese.isda.abdome.intestino_diarreia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Esteatorreia? </p>
+      {{ anamnese.isda.abdome.intestino_esteatorreia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distensão? </p>
+      {{ anamnese.isda.abdome.intestino_distensao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Hemorragia? </p>
+      {{ anamnese.isda.abdome.intestino_hemorragia }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Cólon | reto | ânus</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.abdome.colon_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Diarreia? </p>
+      {{ anamnese.isda.abdome.colon_diarreia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Obstipação? </p>
+      {{ anamnese.isda.abdome.colon_obstipacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sangramento? </p>
+      {{ anamnese.isda.abdome.colon_sangramento }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Prurido? </p>
+      {{ anamnese.isda.abdome.colon_prurido }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Sistema Geniturinário</li>
+    <li class="list-group-item bg-secondary text-white">Rins e vias urinárias</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alterações miccionais? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_alt_miccionais }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alterações da cor da urina? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_alt_cor_urina }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alterações do cheiro da urina? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_alt_cheiro_urina }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alterações de volumes urinário? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_alt_volume_urinario }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Edema? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_edema }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Febre? </p>
+      {{ anamnese.isda.sistema_geniturinario.rins_febre }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Sistema Hemolinfopético</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Astenia? </p>
+      {{ anamnese.isda.sistema_hemolinfopetico.astenia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Adenomegalia? </p>
+      {{ anamnese.isda.sistema_hemolinfopetico.adenomegalia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Hepatomegalia? </p>
+      {{ anamnese.isda.sistema_hemolinfopetico.hepatomegalia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Esplenomegalia? </p>
+      {{ anamnese.isda.sistema_hemolinfopetico.esplenomegalia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Hemorragia? </p>
+      {{ anamnese.isda.sistema_hemolinfopetico.hemorragia }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Coluna vertebral | Ossos | Articulações e Extremidades</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.coluna_vertebral.dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Rigidez pós-repouso? </p>
+      {{ anamnese.isda.coluna_vertebral.rigidez }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sinais inflamatórios? </p>
+      {{ anamnese.isda.coluna_vertebral.sinais_inflamatorios }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Crepitação articular? </p>
+      {{ anamnese.isda.coluna_vertebral.crepitacao_articular }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Manifestação sistêmatica? </p>
+      {{ anamnese.isda.coluna_vertebral.manifestacao_sistemica }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Músculos</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Atrofia muscular? </p>
+      {{ anamnese.isda.musculos.atrofia_muscular }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dificuldade para andar ou subir escadas? </p>
+      {{ anamnese.isda.musculos.dificuldade_andar }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Fraqueza muscular? </p>
+      {{ anamnese.isda.musculos.fraqueza_muscular }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cãibras? </p>
+      {{ anamnese.isda.musculos.caibras }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor? </p>
+      {{ anamnese.isda.musculos.dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Espasmos musculares? </p>
+      {{ anamnese.isda.musculos.espasmos_musculares }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Sistema Nervoso</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios da conciência? </p>
+      {{ anamnese.isda.nervoso.disturbios_consciencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cefaleia? </p>
+      {{ anamnese.isda.nervoso.cefaleia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tontura e vertigem? </p>
+      {{ anamnese.isda.nervoso.tontura_vertigem }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Convulsões? </p>
+      {{ anamnese.isda.nervoso.convusoes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ausências? </p>
+      {{ anamnese.isda.nervoso.ausencias }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Automatismo? </p>
+      {{ anamnese.isda.nervoso.automatismos }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Amnésia? </p>
+      {{ anamnese.isda.nervoso.amnesia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios visuais? </p>
+      {{ anamnese.isda.nervoso.disturbios_visuais }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios auditivos? </p>
+      {{ anamnese.isda.nervoso.disturbios_auditivos }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios da marcha? </p>
+      {{ anamnese.isda.nervoso.disturbios_mancha }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios de motricidade voluntária? </p>
+      {{ anamnese.isda.nervoso.disturbios_motricidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios esfincterianos? </p>
+      {{ anamnese.isda.nervoso.disturbios_esfincterianos }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios do sono? </p>
+      {{ anamnese.isda.nervoso.disturbios_sono }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distúrbios das funções cerebrais superiores? </p>
+      {{ anamnese.isda.nervoso.disturbios_funcoes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Outros: </p>
+      {{ anamnese.isda.nervoso.outros }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Ectoscopia</li>
+
+    <li class="list-group-item bg-secondary text-white">Estado geral</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Qual é o estado do paciente? </p>
+      {{ anamnese.isda.ectoscopia.estado_geral }}
+    </li>
+
+
+    <li class="list-group-item bg-secondary text-white">Nível de conciência</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lucidez: </p>
+      {{ anamnese.isda.ectoscopia.nivel_consciencia_lucidez }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Orientação: </p>
+      {{ anamnese.isda.ectoscopia.nivel_consciencia_orientacao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Interações de fala e linguagem</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Apresenta? </p>
+      {{ anamnese.isda.ectoscopia.interacoes_fala_linguagem }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes: </p>
+      {{ anamnese.isda.ectoscopia.interacoes_exp_facial_detalhes }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Estado nutricional</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Qual o estado nutricional? </p>
+      {{ anamnese.isda.ectoscopia.estado_nutricional_estado }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Quanto? </p>
+      {{ anamnese.isda.ectoscopia.estado_nutricional_quantidade }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Estado de hidratação</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Qual o estado de hidratação? </p>
+      {{ anamnese.isda.ectoscopia.estado_hidratacao_tipo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Quanto? </p>
+      {{ anamnese.isda.ectoscopia.estado_hidratacao_quantificacao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Fácies</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Opções </p>
+      {{ anamnese.isda.ectoscopia.facies }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Interações de expressão facial</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Apresenta? </p>
+      {{ anamnese.isda.ectoscopia.interacoes_exp_facial }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Interações apresentadas: </p>
+      {{ anamnese.isda.ectoscopia.interacoes_exp_facial_detalhes }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Atitude e decúbito</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Opções: </p>
+      {{ anamnese.isda.ectoscopia.atitude_decubito }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Postura e atitude</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Opções: </p>
+      {{ anamnese.isda.ectoscopia.postura_atitude }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Movimentos involuntários</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Apresenta? </p>
+      {{ anamnese.isda.ectoscopia.mov_involuntarios_presenca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Movimentos apresentados? </p>
+      {{ anamnese.isda.ectoscopia.mov_involuntarios }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold"> Detalhe a condição:</p>
+      {{ anamnese.isda.ectoscopia.mov_involuntarios_descricao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Biotipo</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo: </p>
+      {{ anamnese.isda.ectoscopia.biotipo }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Faneros</li>
+
+    <li class="list-group-item bg-info text-white">Cabelos</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo de implantação:</p>
+      {{ anamnese.isda.ectoscopia.faneros_cabelos_tipos_implatacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Distribuição:</p>
+      {{ anamnese.isda.ectoscopia.faneros_cabelos_distribuicao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Quantidade:</p>
+      {{ anamnese.isda.ectoscopia.faneros_cabelos_quantidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Coloração:</p>
+      {{ anamnese.isda.ectoscopia.faneros_cabelos_coloracao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Brilho:</p>
+      {{ anamnese.isda.ectoscopia.faneros_cabelos_brilho }}
+    </li>
+
+    <li class="list-group-item bg-info text-white">Unhas</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Formato:</p>
+      {{ anamnese.isda.ectoscopia.faneros_unhas_formato }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cor:</p>
+      {{ anamnese.isda.ectoscopia.faneros_unhas_cor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Resistência:</p>
+      {{ anamnese.isda.ectoscopia.faneros_unhas_resistencia }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Pele</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Coloração:</p>
+      {{ anamnese.isda.ectoscopia.pele_coloracao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Continuidade:</p>
+      {{ anamnese.isda.ectoscopia.pele_continuidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Umidade:</p>
+      {{ anamnese.isda.ectoscopia.pele_umidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Temperatura:</p>
+      {{ anamnese.isda.ectoscopia.pele_temperatura }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Textura:</p>
+      {{ anamnese.isda.ectoscopia.pele_textura }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Espessura:</p>
+      {{ anamnese.isda.ectoscopia.pele_espessura }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Elasticidade:</p>
+      {{ anamnese.isda.ectoscopia.pele_elasticidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Mobilidade:</p>
+      {{ anamnese.isda.ectoscopia.pele_mobilidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Turgor:</p>
+      {{ anamnese.isda.ectoscopia.pele_turgor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sensibilidade:</p>
+      {{ anamnese.isda.ectoscopia.pele_sensibilidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lesões elementares:</p>
+      {{ anamnese.isda.ectoscopia.pele_lesoes_elementares }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Mucosas</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Apresenta Lesões?</p>
+      {{ anamnese.isda.ectoscopia.mucosas_lesoes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nível de coloração?</p>
+      {{ anamnese.isda.ectoscopia.mucosas_coloracao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Nível de hidratação?</p>
+      {{ anamnese.isda.ectoscopia.mucosas_hidratacao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Tecido celular subcutâneo</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Espasticidade?</p>
+      {{ anamnese.isda.ectoscopia.tecido_celular_subcutaneo_espasticidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Flacidez?</p>
+      {{ anamnese.isda.ectoscopia.tecido_celular_subcutaneo_flacidez }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Espessura?</p>
+      {{ anamnese.isda.ectoscopia.tecido_celular_subcutaneo_espessura }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Edema</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de edema?</p>
+      {{ anamnese.isda.ectoscopia.edema_presenca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo?</p>
+      {{ anamnese.isda.ectoscopia.edema_tipo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes do Edema:</p>
+      {{ anamnese.isda.ectoscopia.edema_descricao_edema }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Localização:</p>
+      {{ anamnese.isda.ectoscopia.edema_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes localização:</p>
+      {{ anamnese.isda.ectoscopia.edema_detalhes_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade:</p>
+      {{ anamnese.isda.ectoscopia.edema_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes intensidade:</p>
+      {{ anamnese.isda.ectoscopia.edema_detalhes_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Consistência:</p>
+      {{ anamnese.isda.ectoscopia.edema_consistencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes consistência:</p>
+      {{ anamnese.isda.ectoscopia.edema_detalhes_consistencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de cacifo:</p>
+      {{ anamnese.isda.ectoscopia.cacifo_presenca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes cacifo:</p>
+      {{ anamnese.isda.ectoscopia.cacifo_detalhe }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Temperatura:</p>
+      {{ anamnese.isda.ectoscopia.edema_temperatura }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhes temperatura:</p>
+      {{ anamnese.isda.ectoscopia.edema_temperatura_detalhe }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor:</p>
+      {{ anamnese.isda.ectoscopia.edema_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Outras observações:</p>
+      {{ anamnese.isda.ectoscopia.ectoscopia_outras_observacoes }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Iterações de linfonodos</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Há iterações?</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_presenca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor?</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Detalhar a dor:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_descricao_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Adenomegalia?</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_adenomegalia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Localização:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tamanho:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_tamanho }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Mobilidade:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_mobilidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Consistência:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_consistencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sensibilidade:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_sensibilidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Alterações da pele:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_alteracoes_pele }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Volume:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_volume }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Textura:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_textura }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Quantidade:</p>
+      {{ anamnese.isda.ectoscopia.linfonodos_quantidade }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Perfusão capilar</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Opção</p>
+      {{ anamnese.isda.ectoscopia.perfusao_capilar_tipo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Quanto tempo?</p>
+      {{ anamnese.isda.ectoscopia.perfusao_capilar_lentificada_tempo }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Exame Respiratório</li>
+
+    <li class="list-group-item bg-secondary text-white">Inspeção</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de cicatriz? </p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_presencacicatriz_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição: </p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_presencacicatriz_motivo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de lesões elementares?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_presenca_de_lesoes_elementares }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de circulação colateral?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_presenca_de_circulacao_colateral }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de retrações ou abaulamentos?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_presenca_de_retracoes_ou_abaulamentos_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Especificação</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_presenca_de_retracoes_ou_abaulamentos_especificacao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Palpação</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de dor?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de dor?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Localização da alteração:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo da dor:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_tipo_da_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Frequência que aparece a dor:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_frenquencia_da_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade da dor:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor irradiada?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_dorirradia_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Frequência que aparece a dor:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_dorirradia_frequencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade da dor irradiada:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_intensidade_da_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Fatores que pioram a dor?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_presencadedor_fatores_que_pioram_a_dor }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Percussão</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Percussão?</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_percussao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">FTV</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_ftv_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Localização da alteração</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_ftv_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Submaciço</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_submacico_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_submacico_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Manobras de Laségue:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_manobra_de_lasengue }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Manobras de Ruault:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_manobra_de_ruault }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Som pulmonar:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_papacao_som_pulmonar }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Timpânico:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_timpanico }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Maciço:</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_palpacao_macico }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Ausculta Pulmonar</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Múrmurio Vesicular Presente</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_murmurio_vesicular_presente }}
+    </li>
+    <!-- <li class="list-group-item">
+      <p class="font-weight-bold">Múrmurio Vesicular Abolido</p>
+      {{ anamnese.exame_fisico.respiratorio. }}
+    </li> -->
+    <li class="list-group-item">
+      <p class="font-weight-bold">Múrmurio Versicular sonoridade</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_murmurio_vesicular_sonoridade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Roncos</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_roncos_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_roncos_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sibilos</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_sibilos_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_sibilos_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Estritor</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_estritor_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_estritor_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Estritor Fino</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_estritorfino_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_estritorfino_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Estritor Grosso</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_estritorgrosso_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_estritorgrosso_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sopro</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_sopro_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_sopro_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Atrito Pleural</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_atritopleural_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lobos pulmonares</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_atritopleural_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ausculta da voz</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_auscultavoz_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ausculta aumentada</p>
+      {{ anamnese.exame_fisico.respiratorio.respiratorio_auscultapulmonar_auscultavoz_ressonancia_aumentada }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Exame Cardiovascular</li>
+
+    <li class="list-group-item bg-secondary text-white">Inspeção e Palpação</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Lesões elementares:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_lesoes_elementares }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Apresenta abaulamentos?</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_presenca_de_abaulamento }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Turgência jugular</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_turgencia_jugular }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Frêmito cardiovascular:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_fremitocardiovascular_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Localização</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_fremitocardiovascular_localizacao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Frêmito: Intensidade</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_fremitocardiovascular_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Polpas digitais:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_polpas_digitais }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_inspecaoepalpacao_tipo_polpa_digital }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Ausculta Cardiaca</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Frequencia cardiaca:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_auscultacardiaca_frequencia_cardiaca }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ritmos cardiacos:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_auscultacardiaca_ritmo_cardiaco }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tempo dos ritmos cardiacos:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_auscultacardiaca_ritmo_cardiaco_tempo }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade do som:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_auscultacardiaca_intensidade_do_som }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de Sopro:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_auscultacarotidea_presenca_de_sopro }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Foco cardíaco:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_soprocardiaco_foco }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade cardíaca:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_soprocardiaco_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Ciclo cardíaco:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_soprocardiaco_relacao_ciclo_cardiaco }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Ictus cordis</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Intensidade:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_ictus_cordis_intensidade }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Polpas digitais:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_ictus_cordis_polpas_digitais }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo:</p>
+      {{ anamnese.exame_fisico.cardiovascular.cardiovascular_ictus_cordis_tipo }}
+    </li>
+  </ul>
+
+  <ul class="list-group mt-2">
+    <li class="list-group-item list-group-item-action active">Exame do Abdome</li>
+
+    <li class="list-group-item bg-secondary text-white">Inspeção</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo do abdome:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_tipo_do_abdome }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de retratações ou Abaulamentos?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_presenca_de_retratacoes }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_presenca_de_retratacoes_descricao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Cicatriz umbilical?</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo posição:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_cicatriz_umbilical }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_tipo_cicatriz_umbilical }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Cicatriz cirúrgica?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_cicatriz_cirurgica }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_cicatriz_cirurgica_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de circulação colateral?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_presenca_circulacao_colateral }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_presenca_circulacao_colateral_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sinal de culen (equimose periumbilical) ?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_sinal_de_culen }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sinal de Grey-turner (equimose nos flancos)</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_presenca_circulacao_colateral_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Pulsatilidade da aorta abdominal</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_pulsatilidade_da_aorta }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Inspeção</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de ruídos hidroaereos?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_inspecao_presenca_de_ruidos_hidroaereos }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Percussão</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tipo:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_som }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Presença de massas?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_presenca_de_massas }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_presenca_de_massas_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Hepatomegalia?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_hepatomegalia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_hepatomegalia_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Esplenomegalia?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_esplenomegalia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_esplenomegalia_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Macicez móvel de decúbito</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_macizez_movel_de_decubito }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sinal de piparote</p>
+      {{ anamnese.exame_fisico.abdome.abdome_percussao_sinal_de_piparote }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Palpação superficial e profunda</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Palpação superficial?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_superficial_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_superficial_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição da dor:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_superficial_dor_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Palpação profunda?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_profunda_valor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dor?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_profunda_dor }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição da dor:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_profunda_dor_descricao }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Tensão abdominal:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_tensao_abdominal }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Massas abdominais:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_massas_abdominais }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Descrição</p>
+      {{ anamnese.exame_fisico.abdome.abdome_palpacao_massas_abdominais_descricao }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Manobra de Mathieu</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Palpável?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_mathieu_palpavel }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Consistência:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_mathieu_consistencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Borda:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_mathieu_borda }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Superfície:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_mathieu_superficie }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dolorosa:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_mathieu_dolorosa }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Manobra de Lemos Torres</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Palpável?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_lemostorres_palpavel }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Consistência:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_lemostorres_consistencia }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Borda:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_lemostorres_borda }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Superfície:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_lemostorres_superficie }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Dolorosa:</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_lemostorres_dolorosa }}
+    </li>
+
+    <li class="list-group-item bg-secondary text-white">Manobras de Shuster</li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Palpável?</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_manobra_de_shuster_palpavel }}
+    </li>
+    <li class="list-group-item">
+      <p class="font-weight-bold">Sinal de Blumberg(Ponto de McBurney):</p>
+      {{ anamnese.exame_fisico.abdome.abdome_manobrasespeciais_sinal_de_blemberg }}
+    </li>
+  </ul>
+</div>
