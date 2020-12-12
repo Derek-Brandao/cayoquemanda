@@ -48,7 +48,7 @@ export class AvaliaAnamneseComponent implements OnInit {
     this.Aservices.addFeedback(anamneseId, data).subscribe(
       res => {
         this.routes.navigate(['/home']);
-        this.Alert.openSnackBar('Cadastrado com sucesso!',  'Ok');
+        this.Alert.openSnackBar('Feedback enviado com sucesso!',  'Ok');
       }
     );
   }
