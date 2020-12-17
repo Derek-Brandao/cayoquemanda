@@ -1,7 +1,13 @@
 <app-header></app-header>
+
 <div class="container my-3" id="print">
   <ul class="list-group">
-    <li class="list-group-item list-group-item-action active">Paciente</li>
+    <li class="list-group-item list-group-item-action active">
+      <div class="d-flex justify-content-between align-items-center">
+        Paciente
+        <button class="btn btn-danger" (click)="gerarPDF()">Gerar relatório</button>
+      </div>
+    </li>
     <li class="list-group-item">
       <p class="font-weight-bold">Nome: </p>
       {{ anamnese.paciente.nome }}
@@ -48,7 +54,7 @@
     </li>
   </ul>
 
-  <ul class="list-group mt-2">
+  <ul class="list-group mt-2" id="quebra">
     <li class="list-group-item list-group-item-action active">Antecedentes</li>
 
     <li class="list-group-item bg-secondary text-white">Fisiológicos</li>
